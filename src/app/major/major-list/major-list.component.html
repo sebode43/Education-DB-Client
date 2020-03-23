@@ -1,0 +1,17 @@
+<app-menu></app-menu>
+<div class="component">
+    <table class="table table-sm">
+        <tr>
+            <th>Id</th>
+            <th>Code</th>
+            <th>Name</th>
+            <th>MinSAT</th>
+        </tr>
+        <tr *ngFor="let m of majors">
+            <td>{{m.id}}</td>
+            <td>{{m.code}}</td>
+            <td>{{m.name}}</td>
+            <td class = "text-left">{{m.minSat}}</td>
+        </tr>
+    </table>
+</div>
