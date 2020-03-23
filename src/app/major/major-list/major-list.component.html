@@ -7,7 +7,7 @@
             <th>Name</th>
             <th>MinSAT</th>
         </tr>
-        <tr *ngFor="let m of majors">
+        <tr *ngFor="let m of majors | sort:'code'">
             <td>{{m.id}}</td>
             <td>{{m.code}}</td>
             <td>{{m.name}}</td>
