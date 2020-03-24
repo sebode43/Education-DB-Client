@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MajorService } from '../major.service';
+import { Major } from '../major.class';
 
 @Component({
   selector: 'app-major-detail',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MajorDetailComponent implements OnInit {
 
-  constructor() { }
+  major: Major = new Major();
+
+  constructor(
+    private route: ActivatedRoute,
+    private majorsvc: MajorService
+    ) { }
 
   ngOnInit(): void {
+    let id = this.route.snapshot.params.id;
+    this.majorsvc.get(id).subscribe(
+      res => {
+        this.major = res;
+        console.debug("Major:", res);
+      },
+      err => {console.error("Error on Major-Detail Get", err)}
+    );
   }
 
 }

@@ -7,6 +7,7 @@
             <th>SAT</th>
             <th>GPA</th>
             <th>Major</th>
+            <th>Actions</th>
         </tr>
         <tr *ngFor="let s of students">
             <td>{{s.id}}</td>
@@ -14,6 +15,9 @@
             <td>{{s.sat}}</td>
             <td>{{s.gpa}}</td>
             <td>{{s.major != null ? s.major.name : "Undeclared"}}</td>
+            <td>
+                <a routerLink = "/students/detail/{{s.id}}">Detail</a>
+            </td>
         </tr>
     </table>
 </div>

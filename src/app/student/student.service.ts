@@ -12,5 +12,8 @@ export class StudentService {
   list(): Observable<Student[]>{
     return this.http.get(`${url}`) as Observable<Student[]>;
   }
+  get(id: any): Observable<Student>{
+    return this.http.get(`${url}/${id}`) as Observable<Student>;
+  }
   constructor(private http: HttpClient) { }
 }

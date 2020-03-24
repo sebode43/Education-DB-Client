@@ -12,6 +12,9 @@ export class MajorService {
   list():Observable<Major[]>{
     return this.http.get(`${url}`) as Observable<Major[]>;
   }
+  get(id: any):Observable<Major>{
+    return this.http.get(`${url}/${id}`) as Observable<Major>;
+  }
   constructor(
     private http: HttpClient
   ) { }
