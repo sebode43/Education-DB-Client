@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MajorService } from '../major.service';
 import { Major } from '../major.class';
 
@@ -11,10 +11,22 @@ import { Major } from '../major.class';
 export class MajorDetailComponent implements OnInit {
 
   major: Major = new Major();
+  delete():void{
+    this.majorsvc.remove(this.major).subscribe(
+      res => {
+        this.major = res;
+        console.debug("Major delete successful", res);
+        this.router.navigateByUrl("/majors/list");
+      },
+      err => {console.error("Major delete failed!", err)}
+    );
+
+  }
 
   constructor(
     private route: ActivatedRoute,
-    private majorsvc: MajorService
+    private majorsvc: MajorService,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
