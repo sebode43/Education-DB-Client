@@ -28,7 +28,7 @@
         <tr>
             <th>Major</th>
             <td>
-                <select [(ngModel)] = "student.majorid">
+                <select [(ngModel)] = "student.majorId">
                     <option *ngFor = "let m of majors" value="{{+m.id}}">{{m.name}}</option>
                     <option value="">Undeclared</option>
                 </select>

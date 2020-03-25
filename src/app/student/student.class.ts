@@ -5,7 +5,7 @@ export class Student{
     name: string = '';
     sat: number = 400;
     gpa: number = 3.0;
-    majorid?: number = null;
+    majorId?: number = null;
     major: Major = null;
 
     constructor() {}

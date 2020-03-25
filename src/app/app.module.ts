@@ -15,6 +15,7 @@ import { StudentCreateComponent } from './student/student-create/student-create.
 import { StudentDetailComponent } from './student/student-detail/student-detail.component';
 import { StudentEditComponent } from './student/student-edit/student-edit.component';
 import { SortPipe } from './pipes/sort.pipe';
+import { MenuitemComponent } from './menu/menuitem/menuitem.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SortPipe } from './pipes/sort.pipe';
     StudentCreateComponent,
     StudentDetailComponent,
     StudentEditComponent,
-    SortPipe
+    SortPipe,
+    MenuitemComponent
   ],
   imports: [
     BrowserModule, 

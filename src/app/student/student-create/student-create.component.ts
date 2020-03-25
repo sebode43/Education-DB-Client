@@ -13,9 +13,9 @@ import { Major } from 'src/app/major/major.class';
 export class StudentCreateComponent implements OnInit {
 
   student: Student = new Student();
-  major: Major =  Major[];
+  majors: Major[] = [];
   save(): void{
-    this.student.majorid = Number(this.student.majorid);
+    this.student.majorId = Number(this.student.majorId);
     this.studentsvc.create(this.student).subscribe(
       res => {
         console.debug("Student Created", res);
@@ -34,9 +34,10 @@ export class StudentCreateComponent implements OnInit {
   ngOnInit(): void {
     this.majorsvc.list().subscribe(
       res => {
+        this.majors = res;
         console.debug("Major:", res);
       },
-      err => {console.error("Error editing major:", err);}
+      err => {console.error("Error reading major:", err);}
     );
   }
 
