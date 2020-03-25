@@ -17,6 +17,8 @@ import { StudentEditComponent } from './student/student-edit/student-edit.compon
 import { SortPipe } from './pipes/sort.pipe';
 import { MenuitemComponent } from './menu/menuitem/menuitem.component';
 import { MajorcodecheckComponent } from './major/majorcodecheck/majorcodecheck.component';
+import { MajorSearchPipe } from './major/major-search.pipe';
+import { StudentSearchPipe } from './student/student-search.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { MajorcodecheckComponent } from './major/majorcodecheck/majorcodecheck.c
     StudentEditComponent,
     SortPipe,
     MenuitemComponent,
-    MajorcodecheckComponent
+    MajorcodecheckComponent,
+    MajorSearchPipe,
+    StudentSearchPipe
   ],
   imports: [
     BrowserModule, 

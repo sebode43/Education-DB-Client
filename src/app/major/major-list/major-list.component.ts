@@ -9,6 +9,7 @@ import { Major } from '../major.class';
 })
 export class MajorListComponent implements OnInit {
   majors:Major[] = [];
+  searchCriteria: string = "";
   constructor(
     private major: MajorService
   ) { }

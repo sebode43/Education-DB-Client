@@ -1,5 +1,7 @@
 <app-menu></app-menu>
-<a routerLink = "/majors/create">New Major</a>
+<label>Major List</label> | 
+<a routerLink = "/majors/create">New Major</a> | 
+<input [(ngModel)]="searchCriteria" type="text" placeholder="Search">
 <div class="component">
     <table class="table table-sm">
         <tr>
@@ -9,7 +11,7 @@
             <th>MinSAT</th>
             <th>Actions</th>
         </tr>
-        <tr *ngFor="let m of majors | sort:'code'">
+        <tr *ngFor="let m of majors | majorSearch: searchCriteria | sort:'code'">
             <td>{{m.id}}</td>
             <td>{{m.code}}</td>
             <td>{{m.name}}</td>
