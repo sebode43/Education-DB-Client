@@ -4,6 +4,7 @@ import { MajorListComponent } from './major/major-list/major-list.component';
 import { MajorDetailComponent } from './major/major-detail/major-detail.component';
 import { MajorCreateComponent } from './major/major-create/major-create.component';
 import { MajorEditComponent } from './major/major-edit/major-edit.component';
+import { MajorcodecheckComponent } from './major/majorcodecheck/majorcodecheck.component';
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { StudentCreateComponent } from './student/student-create/student-create.component';
 import { StudentDetailComponent } from './student/student-detail/student-detail.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: "majors/detail/:id",  component: MajorDetailComponent},
   {path: "majors/create",  component: MajorCreateComponent},
   {path: "majors/edit/:id",  component: MajorEditComponent},
+  {path: "majors/code",  component: MajorcodecheckComponent},
   {path: "students/list",  component: StudentListComponent},
   {path: "students/detail/:id",  component: StudentDetailComponent},
   {path: "students/create",  component: StudentCreateComponent},

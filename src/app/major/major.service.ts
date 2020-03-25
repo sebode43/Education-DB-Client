@@ -24,6 +24,10 @@ export class MajorService {
   remove(major: Major):Observable<any>{
     return this.http.delete(`${url}/${major.id}`) as Observable<any>;
   }
+  checkCode(code: string):Observable<any>{
+    return this.http.get(`${url}/code/${code}`) as Observable<any>;
+  }
+
   constructor(
     private http: HttpClient
   ) { }

@@ -22,6 +22,18 @@ export class MajorDetailComponent implements OnInit {
     );
 
   }
+  minSatUpdate():void{
+    if(this.major.minSat <= 1000){
+      this.major.minSat += 100;
+    }else{this.major.minSat += 50;}   
+    this.majorsvc.change(this.major).subscribe(
+      res => {
+        console.log("MinSAT change successful");
+      },
+      err => {console.error("MinSAT change failed!", err)}
+    );
+
+  }
 
   constructor(
     private route: ActivatedRoute,

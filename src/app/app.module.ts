@@ -16,6 +16,7 @@ import { StudentDetailComponent } from './student/student-detail/student-detail.
 import { StudentEditComponent } from './student/student-edit/student-edit.component';
 import { SortPipe } from './pipes/sort.pipe';
 import { MenuitemComponent } from './menu/menuitem/menuitem.component';
+import { MajorcodecheckComponent } from './major/majorcodecheck/majorcodecheck.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MenuitemComponent } from './menu/menuitem/menuitem.component';
     StudentDetailComponent,
     StudentEditComponent,
     SortPipe,
-    MenuitemComponent
+    MenuitemComponent,
+    MajorcodecheckComponent
   ],
   imports: [
     BrowserModule, 
